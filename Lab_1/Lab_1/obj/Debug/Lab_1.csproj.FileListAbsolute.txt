@@ -10,3 +10,15 @@ C:\Users\admin\Desktop\Лабораторные работы\Семестр 6\О
 C:\Users\admin\Desktop\Лабораторные работы\Семестр 6\Объектно-ориентированный анализ и проектирование\Lab_1\obj\Debug\Lab_1.exe
 C:\Users\admin\Desktop\Лабораторные работы\Семестр 6\Объектно-ориентированный анализ и проектирование\Lab_1\obj\Debug\Lab_1.pdb
 C:\Users\admin\Desktop\Лабораторные работы\Семестр 6\Объектно-ориентированный анализ и проектирование\Lab_1\obj\Debug\Lab_1.Form2.resources
+C:\Users\admin\Desktop\Лабораторные работы\Семестр 6\Объектно-ориентированный анализ и проектирование\Lab_1\Lab_1\bin\Debug\Lab_1.exe.config
+C:\Users\admin\Desktop\Лабораторные работы\Семестр 6\Объектно-ориентированный анализ и проектирование\Lab_1\Lab_1\bin\Debug\Lab_1.exe
+C:\Users\admin\Desktop\Лабораторные работы\Семестр 6\Объектно-ориентированный анализ и проектирование\Lab_1\Lab_1\bin\Debug\Lab_1.pdb
+C:\Users\admin\Desktop\Лабораторные работы\Семестр 6\Объектно-ориентированный анализ и проектирование\Lab_1\Lab_1\obj\Debug\Lab_1.csproj.AssemblyReference.cache
+C:\Users\admin\Desktop\Лабораторные работы\Семестр 6\Объектно-ориентированный анализ и проектирование\Lab_1\Lab_1\obj\Debug\Lab_1.csproj.SuggestedBindingRedirects.cache
+C:\Users\admin\Desktop\Лабораторные работы\Семестр 6\Объектно-ориентированный анализ и проектирование\Lab_1\Lab_1\obj\Debug\Lab_1.Form2.resources
+C:\Users\admin\Desktop\Лабораторные работы\Семестр 6\Объектно-ориентированный анализ и проектирование\Lab_1\Lab_1\obj\Debug\Lab_1.Form1.resources
+C:\Users\admin\Desktop\Лабораторные работы\Семестр 6\Объектно-ориентированный анализ и проектирование\Lab_1\Lab_1\obj\Debug\Lab_1.Properties.Resources.resources
+C:\Users\admin\Desktop\Лабораторные работы\Семестр 6\Объектно-ориентированный анализ и проектирование\Lab_1\Lab_1\obj\Debug\Lab_1.csproj.GenerateResource.cache
+C:\Users\admin\Desktop\Лабораторные работы\Семестр 6\Объектно-ориентированный анализ и проектирование\Lab_1\Lab_1\obj\Debug\Lab_1.csproj.CoreCompileInputs.cache
+C:\Users\admin\Desktop\Лабораторные работы\Семестр 6\Объектно-ориентированный анализ и проектирование\Lab_1\Lab_1\obj\Debug\Lab_1.exe
+C:\Users\admin\Desktop\Лабораторные работы\Семестр 6\Объектно-ориентированный анализ и проектирование\Lab_1\Lab_1\obj\Debug\Lab_1.pdb

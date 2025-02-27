@@ -9,7 +9,7 @@ namespace Lab_1
 {
     public abstract class ReportBuilder
     {
-        public Report report;
+        protected Report report;
         public ReportBuilder()
         {
             report = new Report();
