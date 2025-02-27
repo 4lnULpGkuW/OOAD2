@@ -41,18 +41,27 @@ namespace Lab_1
         {
             string htmlContent = $@"
                 <html>
-                <head>
-                    <title>Отчёт по теме {Name}</title>
+                <head>";
+            if (Diagram != null) htmlContent += "<title>Отчёт по теме {Name}</title>";
+            htmlContent += $@"
                 </head>
-                <body>
-                    <h1>Отчёт по теме {Name}</h1>
-                    <h2>Цель работы</h2><p>{Goal}</p>
-                    <h2>Задание</h2><p>{Task}</p>
-                    <h2>Теоретические сведения</h2><p>{Theory}</p>
-                    <h2>Описание экспериментальной установки</h2><p>{Setup}</p>
-                    <h2>Результаты работы</h2><p>{Results}</p>
-                    <h2>Анализ результатов работы</h2><p>{Analysis}</p>
-                    <h2>Выводы</h2><p>{Conclusion}</p>";
+                <body>";
+            if (Name != null)
+                htmlContent += $"<h1>Отчёт по теме {Name}</h1>";
+            if (Goal != null)
+                htmlContent += $"<h2>Цель работы</h2><p>{Goal}</p>";
+            if (Task != null)
+                htmlContent += $"<h2>Задание</h2><p>{Task}</p>";
+            if (Theory != null)
+                htmlContent += $"<h2>Теоретические сведения</h2><p>{Theory}</p>";
+            if (Setup != null)
+                htmlContent += $"<h2>Описание экспериментальной установки</h2><p>{Setup}</p>";
+            if (Results != null)
+                htmlContent += $"<h2>Результаты работы</h2><p>{Results}</p>";
+            if (Analysis != null)
+                htmlContent += $"<h2>Анализ результатов работы</h2><p>{Analysis}</p>";
+            if (Conclusion != null)
+                htmlContent += $"<h2>Выводы</h2><p>{Conclusion}</p>";
             if (!string.IsNullOrEmpty(Diagram))
             {
                 htmlContent += $"<h2>ER диаграмма</h2><img src={Diagram} alt=\"ER диаграмма\">";

@@ -12,15 +12,15 @@ namespace Lab_1
                         string theory, string setup, string results, string analysis, 
                         string conclusion, string domainSpecific)
         {
-            reportBuilder.SetName(name);
-            reportBuilder.SetGoal(goal);
-            reportBuilder.SetTask(task);
-            reportBuilder.SetTheory(theory);
-            reportBuilder.SetSetup(setup);
-            reportBuilder.SetResults(results);
-            reportBuilder.SetAnalysis(analysis);
-            reportBuilder.SetConclusion(conclusion);
-            reportBuilder.SetDomainSpecific(domainSpecific);
+            if (!string.IsNullOrEmpty(name)) reportBuilder.SetName(name);
+            if (!string.IsNullOrEmpty(goal)) reportBuilder.SetGoal(goal);
+            if (!string.IsNullOrEmpty(task)) reportBuilder.SetTask(task);
+            if (!string.IsNullOrEmpty(theory)) reportBuilder.SetTheory(theory);
+            if (!string.IsNullOrEmpty(setup)) reportBuilder.SetSetup(setup);
+            if (!string.IsNullOrEmpty(results)) reportBuilder.SetResults(results);
+            if (!string.IsNullOrEmpty(analysis)) reportBuilder.SetAnalysis(analysis);
+            if (!string.IsNullOrEmpty(conclusion)) reportBuilder.SetConclusion(conclusion);
+            if (!string.IsNullOrEmpty(domainSpecific)) reportBuilder.SetDomainSpecific(domainSpecific);
         }
     }
 }
