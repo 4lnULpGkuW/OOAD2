@@ -27,6 +27,7 @@ namespace Lab_2
             public double Value { get; set; }
         }
         ObservableCollection<VariableEntry> Variables = new();
+        Dictionary<string, INode> History = new();
         public MainWindow()
         {
             InitializeComponent();
@@ -40,7 +41,13 @@ namespace Lab_2
         {
             try
             {
-                INode node = Parser.ParsePrefix(TextBoxPrefix.Text);
+                INode node;
+                if (History.TryGetValue(TextBoxPrefix.Text, out node)) { }
+                else
+                {
+                    node = Parser.ParsePrefix(TextBoxPrefix.Text);
+                    History.Add(TextBoxPrefix.Text, node);
+                }
                 TextBoxInfix.Text = node.ToInfix();
                 TextBoxEval.Text = node.Evaluate(Variables.ToDictionary(t => t.Variable, t => t.Value)).ToString();
             }
