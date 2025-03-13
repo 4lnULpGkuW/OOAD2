@@ -38,7 +38,8 @@ namespace Lab_2
             }
             else
             {
-                if (_operatorInfo.Symbol == "neg" && _left is OperatorNode leftOp && leftOp._operatorInfo.Arity == 1)
+                if (_operatorInfo.Symbol == "neg" && (_left is OperatorNode leftOp && leftOp._operatorInfo.Arity == 1) ||
+                        _left is OperandNode)
                     return $"-{leftExpr}";
                 else
                     return _operatorInfo.Symbol == "neg" ?
