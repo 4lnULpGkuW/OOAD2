@@ -28,6 +28,7 @@ namespace Lab_2
         }
         ObservableCollection<VariableEntry> Variables = new();
         Dictionary<string, INode> History = new();
+        public ObservableCollection<string> HistoryStrings { get; set; }
         public MainWindow()
         {
             InitializeComponent();
@@ -36,6 +37,8 @@ namespace Lab_2
             Variables.Add(new VariableEntry { Variable = "y", Value = 3.2 });
 
             DataGrid1.ItemsSource = Variables;
+
+            HistoryStrings = new();
         }
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
@@ -47,6 +50,7 @@ namespace Lab_2
                 {
                     node = Parser.ParsePrefix(TextBoxPrefix.Text);
                     History.Add(TextBoxPrefix.Text, node);
+                    HistoryStrings.Add(TextBoxPrefix.Text);
                 }
                 TextBoxInfix.Text = node.ToInfix();
                 TextBoxEval.Text = node.Evaluate(Variables.ToDictionary(t => t.Variable, t => t.Value)).ToString();
@@ -61,5 +65,18 @@ namespace Lab_2
             }
 
         }
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            SubWindow subWindow = new SubWindow(this);
+            subWindow.Show();
+            subWindow.StringSelected += SubWindow_StringSelected;
+
+        }
+        private void SubWindow_StringSelected(string selectedString)
+        {
+            TextBoxPrefix.Text = selectedString;
+        }
+
+
     }
 }

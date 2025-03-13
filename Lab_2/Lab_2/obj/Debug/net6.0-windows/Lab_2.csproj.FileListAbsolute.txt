@@ -21,3 +21,5 @@ C:\Users\admin\Desktop\Лабораторные работы\Семестр 6\О
 C:\Users\admin\Desktop\Лабораторные работы\Семестр 6\Объектно-ориентированный анализ и проектирование\Lab_2\Lab_2\obj\Debug\net6.0-windows\ref\Lab_2.dll
 C:\Users\admin\Desktop\Лабораторные работы\Семестр 6\Объектно-ориентированный анализ и проектирование\Lab_2\Lab_2\obj\Debug\net6.0-windows\MainWindow1.g.cs
 C:\Users\admin\Desktop\Лабораторные работы\Семестр 6\Объектно-ориентированный анализ и проектирование\Lab_2\Lab_2\obj\Debug\net6.0-windows\MainWindow1.baml
+C:\Users\admin\Desktop\Лабораторные работы\Семестр 6\Объектно-ориентированный анализ и проектирование\Lab_2\Lab_2\obj\Debug\net6.0-windows\SubWindow.g.cs
+C:\Users\admin\Desktop\Лабораторные работы\Семестр 6\Объектно-ориентированный анализ и проектирование\Lab_2\Lab_2\obj\Debug\net6.0-windows\SubWindow.baml

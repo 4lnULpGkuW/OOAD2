@@ -15,7 +15,7 @@
                 <TranslateTransform X="1"/>
             </TransformGroup>
         </Grid.RenderTransform>
-        <Button x:Name="Button1" Content="Button" HorizontalAlignment="Center" Margin="20,270,20,0" VerticalAlignment="Top" Click="Button_Click_1" Width="210"/>
+        <Button x:Name="Button1" Content="Calculate" HorizontalAlignment="Left" Margin="20,270,0,0" VerticalAlignment="Top" Click="Button_Click_1" Width="90"/>
         <TextBox x:Name="TextBoxEval" HorizontalAlignment="Right" Margin="0,354,20,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="160" IsReadOnly="True"/>
         <DataGrid x:Name="DataGrid1" Margin="20,60,20,148" IsManipulationEnabled="True" Height="180"/>
         <TextBox x:Name="TextBoxInfix" HorizontalAlignment="Right" Margin="0,314,20,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="160" IsReadOnly="True"/>
@@ -23,5 +23,6 @@
         <Label Content="Prefix" HorizontalAlignment="Left" Margin="20,20,0,0" VerticalAlignment="Top"/>
         <Label Content="Infix" HorizontalAlignment="Left" Margin="20,310,0,0" VerticalAlignment="Top"/>
         <Label Content="Eval" HorizontalAlignment="Left" Margin="20,350,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="Button2" Content="History" HorizontalAlignment="Left" Margin="140,270,0,0" VerticalAlignment="Top" Click="Button_Click_2" Width="90"/>
     </Grid>
 </Window>
