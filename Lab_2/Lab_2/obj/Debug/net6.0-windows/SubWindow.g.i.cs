@@ -61,7 +61,7 @@ namespace Lab_2 {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Lab_2;component/subwindow.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Lab_2;V1.0.0.0;component/subwindow.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\SubWindow.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

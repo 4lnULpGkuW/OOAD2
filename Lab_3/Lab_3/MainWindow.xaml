@@ -1,0 +1,40 @@
+﻿<Window x:Class="Lab_3.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Lab_3"
+        mc:Ignorable="d"
+        Title="Control Tower" Height="470" Width="480" SizeToContent="WidthAndHeight">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="120*"/>
+            <RowDefinition Height="120*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="80*"/>
+            <ColumnDefinition Width="80*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="20,20,10,10">
+            <Label Content="Aircrafts"/>
+            <DataGrid x:Name="DataGridAircrafts" d:ItemsSource="{d:SampleData ItemCount=5}" Width="210" Height="150" SelectionChanged="DataGridAircrafts_SelectionChanged" ColumnWidth="Auto"/>
+        </StackPanel>
+
+        <StackPanel Grid.Column="1" HorizontalAlignment="Center" Orientation="Vertical" VerticalAlignment="Center" Margin="10,20,20,10">
+            <Label Content="Runways"/>
+            <DataGrid x:Name="DataGridRunways" d:ItemsSource="{d:SampleData ItemCount=5}" Width="210" Height="150" ColumnWidth="Auto"/>
+        </StackPanel>
+        <StackPanel Grid.Column="1" HorizontalAlignment="Center" Orientation="Vertical" Grid.Row="1" VerticalAlignment="Center" Margin="10,10,20,20">
+            <Label Content="Terminals"/>
+
+            <DataGrid x:Name="DataGridTerminals" d:ItemsSource="{d:SampleData ItemCount=5}" Width="210" Height="150" ColumnWidth="Auto"/>
+        </StackPanel>
+        <StackPanel HorizontalAlignment="Center" Margin="20,10,10,20" Orientation="Vertical" Grid.Row="1" VerticalAlignment="Center" Width="210">
+            <Button x:Name="ButtonAddAircraft" Content="Add aircraft" Width="210" Click="ButtonAddAircraft_Click"/>
+            <Label Content="Log" Width="210"/>
+            <ListBox x:Name="LogListBox" d:ItemsSource="{d:SampleData ItemCount=5}" Height="130" Width="210"/>
+
+        </StackPanel>
+
+    </Grid>
+</Window>
