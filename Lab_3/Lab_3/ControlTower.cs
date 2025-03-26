@@ -28,9 +28,9 @@ namespace Lab_3
                 Console.Write($"{aircraft.RegCode} requested landing off");
             }
             _aircrafts[aircraft] = (_aircrafts[aircraft].Item1, "queued");
-            await ProcessRequests();
+            await ProcessRequest();
         }
-        private async Task ProcessRequests()
+        private async Task ProcessRequest()
         {
             while (_requestQueue.Count > 0)
             {
