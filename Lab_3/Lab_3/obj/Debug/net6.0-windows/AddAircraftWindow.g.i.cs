@@ -69,7 +69,7 @@ namespace Lab_3 {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Lab_3;component/addaircraftwindow.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Lab_3;V1.0.0.0;component/addaircraftwindow.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\AddAircraftWindow.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
