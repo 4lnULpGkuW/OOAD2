@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "Jf1bg3VXCCIkjajZpvYfM5IEd98CtS4BCJcXFCyVeiHJaxDDXyzHNf83GwHKxcqGY/597aztB6XxqFmguUasIg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\admin\\Desktop\\Лабораторные работы\\Семестр 6\\Объектно-ориентированный анализ и проектирование\\Lab_4\\Lab_4\\Lab_4.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\admin\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
