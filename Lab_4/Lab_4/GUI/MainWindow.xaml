@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Lab_4"
         mc:Ignorable="d"
-        Title="Currency conventor" Height="200" Width="250" Loaded="Window_Loaded">
+        Title="Currency conventor" Height="200" Width="250" Loaded="Window_Loaded" SizeToContent="WidthAndHeight" ResizeMode="NoResize">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
@@ -28,8 +28,10 @@
             <TextBox x:Name="TextBoxAmount" TextWrapping="Wrap" Width="79" Height="22" LostFocus="TextBoxAmount_LostFocus"/>
         </StackPanel>
         <StackPanel Grid.Column="1" HorizontalAlignment="Center" Orientation="Vertical" Grid.Row="1" VerticalAlignment="Center">
-            <Label Height="26" Width="79"/>
+            <Label Height="26" Content="" Width="79"/>
             <TextBox x:Name="TextBoxResult" TextWrapping="Wrap" Width="79" Height="22"/>
         </StackPanel>
+        <Label Content="Conventor" Margin="54,85,5,73" Grid.RowSpan="2"/>
+        <ComboBox x:Name="ComboBoxConventor" Margin="5,89,40,73" Grid.Column="1" Grid.RowSpan="2" Height="21.96" SelectionChanged="ComboBoxConventor_SelectionChanged" Width="80"/>
     </Grid>
 </Window>

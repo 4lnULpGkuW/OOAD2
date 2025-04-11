@@ -20,21 +20,32 @@ namespace Lab_4.GUI
     /// </summary>
     public partial class MainWindow : Window
     {
-        ICurrencyService serv;
-        public MainWindow(ICurrencyService serv)
+        List<ICurrencyService> serv;
+        public MainWindow(List<ICurrencyService> serv)
         {
             this.serv = serv;
             InitializeComponent();
         }
         private async void TextBoxAmount_LostFocus(object sender, RoutedEventArgs e)
         {
-            TextBoxResult.Text = Convert.ToString(await serv.Exchange(Convert.ToString(ComboBoxFrom.SelectedValue),
-                Convert.ToString(ComboBoxTo.SelectedValue),
-                Convert.ToDecimal(TextBoxAmount.Text)));
+            TextBoxResult.Text = Convert.ToString(
+                await serv[ComboBoxConventor.SelectedIndex].Exchange(Convert.ToString(ComboBoxFrom.SelectedValue),
+            Convert.ToString(ComboBoxTo.SelectedValue),
+            Convert.ToDecimal(TextBoxAmount.Text)));
         }
         private async void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            List<string> currencies = await serv.GetCurrencyList();
+            List<string> conventors = new List<string>();
+            foreach (var i in serv)
+                conventors.Add(i.GetType().Name);
+            ComboBoxConventor.ItemsSource = conventors;
+            ComboBoxConventor.SelectedIndex = 0;
+            ComboBoxConventor_SelectionChanged(null, null);
+        }
+
+        private async void ComboBoxConventor_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            List<string> currencies = await serv[ComboBoxConventor.SelectedIndex].GetCurrencyList();
             ComboBoxFrom.ItemsSource = currencies;
             ComboBoxTo.ItemsSource = currencies;
         }
