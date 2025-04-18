@@ -16,5 +16,5 @@ TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 1951607664360
 AnotherWindow.xaml;GUI\MainWindow.xaml;
 
-False
+True
 

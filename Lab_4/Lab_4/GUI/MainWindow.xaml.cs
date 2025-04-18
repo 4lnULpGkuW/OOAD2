@@ -28,10 +28,17 @@ namespace Lab_4.GUI
         }
         private async void TextBoxAmount_LostFocus(object sender, RoutedEventArgs e)
         {
+            decimal amount;
+            if (ComboBoxFrom.SelectedItem == null || ComboBoxTo.SelectedItem == null ||
+                !decimal.TryParse(TextBoxAmount.Text, out amount) || amount < 0)
+            {
+                MessageBox.Show("Please fill all fields and make sure the number is non negative");
+                return;
+            }
             TextBoxResult.Text = Convert.ToString(
                 await serv[ComboBoxConventor.SelectedIndex].Exchange(Convert.ToString(ComboBoxFrom.SelectedValue),
             Convert.ToString(ComboBoxTo.SelectedValue),
-            Convert.ToDecimal(TextBoxAmount.Text)));
+            amount));
         }
         private async void Window_Loaded(object sender, RoutedEventArgs e)
         {

@@ -32,9 +32,11 @@ namespace Lab_4
         }
         private async void TextBoxAmount_LostFocus(object sender, RoutedEventArgs e)
         {
-            if (ComboBoxFrom.SelectedItem == null || ComboBoxTo.SelectedItem == null || string.IsNullOrWhiteSpace(TextBoxAmount.Text))
+            decimal amount;
+            if (ComboBoxFrom.SelectedItem == null || ComboBoxTo.SelectedItem == null ||
+                !decimal.TryParse(TextBoxAmount.Text, out amount) || amount < 0)
             {
-                MessageBox.Show("Please fill all fields");
+                MessageBox.Show("Please fill all fields and make sure the number is non negative");
                 return;
             }
 
@@ -42,7 +44,6 @@ namespace Lab_4
             {
                 string fromCurrency = ComboBoxFrom.SelectedItem.ToString();
                 string toCurrency = ComboBoxTo.SelectedItem.ToString();
-                decimal amount = Convert.ToDecimal(TextBoxAmount.Text);
 
                 string url = $"https://v6.exchangerate-api.com/v6/{ApiKey}/pair/{fromCurrency}/{toCurrency}/{amount}";
                 var response = await httpClient.GetStringAsync(url);
